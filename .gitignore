@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# LocalWP
+Local Sites/
+
+# Node
+node_modules/
+
+# Composer
+vendor/
+
+# Backup
+*.zip
+*.sql
+*.sql.gz
