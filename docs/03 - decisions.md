@@ -2,21 +2,19 @@
 
 # 03 – Project Decisions
 
-Version: 1.0
+**Version:** 2.0
 
-Status: Approved
+**Status:** Approved
 
-Last Update: 2026-08-07
+**Last Update:** 2026-08-07
 
 ---
 
 # Purpose
 
-This document records all architectural, editorial and technical decisions adopted during the development of **PANG Next**.
+This document records the architectural, editorial and technical decisions adopted during the development of **PANG Next**.
 
-The purpose of this document is to ensure consistency throughout the project and to document the rationale behind every major decision.
-
-Unless explicitly superseded, every approved decision is considered stable.
+Approved decisions are considered stable and constitute the reference for the implementation of the website.
 
 ---
 
@@ -24,9 +22,7 @@ Unless explicitly superseded, every approved decision is considered stable.
 
 **Status:** Approved
 
-The website contains a single **People** page.
-
-The page is organised into the following categories:
+The website contains a single **People** page organised into the following sections.
 
 ```
 People
@@ -47,15 +43,13 @@ The page does not use internal navigation menus.
 
 Each member card displays a coloured badge identifying the member category.
 
-| Category | Badge Colour |
-|-----------|--------------|
+| Category | Colour |
+|----------|--------|
 | Faculty | Blue |
 | Researchers | Green |
 | PhD Students | Yellow |
 | Collaborators | Purple |
 | Past Members | Grey |
-
-The badge is displayed both in the People page and in the individual profile.
 
 ---
 
@@ -65,7 +59,7 @@ The badge is displayed both in the People page and in the individual profile.
 
 The website adopts a flat navigation model.
 
-The main navigation contains only the following entries:
+The main navigation contains only:
 
 - Home
 - About
@@ -77,9 +71,7 @@ The main navigation contains only the following entries:
 - Resources
 - Contacts
 
-Navigation does not use dropdown menus.
-
-Subsections are organised inside the corresponding page.
+Dropdown menus are intentionally avoided.
 
 ---
 
@@ -99,7 +91,7 @@ Past Members include only former members who no longer actively collaborate with
 
 **Status:** Approved
 
-Every member card follows the same layout.
+All member cards follow the same layout.
 
 Each card contains:
 
@@ -108,7 +100,7 @@ Each card contains:
 - Academic Position
 - Affiliation
 - Category Badge
-- View Profile button
+- View Profile
 
 The following information is intentionally excluded:
 
@@ -116,8 +108,6 @@ The following information is intentionally excluded:
 - Publications
 - Contact information
 - Research interests
-
-These elements belong to the personal profile.
 
 ---
 
@@ -127,15 +117,13 @@ These elements belong to the personal profile.
 
 Each member has an individual profile page.
 
-The profile contains only stable information.
-
-Structure:
+The profile contains:
 
 - Photo
 - Full Name
 - Academic Position
-- Category
 - Affiliation
+- Category
 
 Sections:
 
@@ -149,7 +137,7 @@ External Profiles:
 - Google Scholar
 - Scopus
 
-Dynamic information such as projects or news is intentionally excluded from Version 1.
+Projects, news and other dynamic information are intentionally excluded from Version 1.
 
 ---
 
@@ -157,7 +145,7 @@ Dynamic information such as projects or news is intentionally excluded from Vers
 
 **Status:** Approved
 
-Each page has one primary objective.
+Each page has a single objective.
 
 | Page | Purpose |
 |------|---------|
@@ -168,10 +156,8 @@ Each page has one primary objective.
 | Projects | Present research projects |
 | Publications | Browse scientific publications |
 | News | Present recent activities |
-| Resources | Software and datasets |
+| Resources | Present software and datasets |
 | Contacts | Contact information |
-
-Pages should avoid mixing unrelated content.
 
 ---
 
@@ -179,9 +165,7 @@ Pages should avoid mixing unrelated content.
 
 **Status:** Approved
 
-Members are **not** ordered alphabetically.
-
-The page follows the organisational structure of the research group.
+Members are not ordered alphabetically.
 
 Categories appear in the following order:
 
@@ -191,9 +175,7 @@ Categories appear in the following order:
 4. Collaborators
 5. Past Members
 
-Within each category, ordering is manual.
-
-Alphabetical ordering is intentionally avoided because it does not reflect the organisation and scientific leadership of the group.
+Members inside each category are ordered manually.
 
 ---
 
@@ -201,17 +183,17 @@ Alphabetical ordering is intentionally avoided because it does not reflect the o
 
 **Status:** Approved
 
-All main pages use a **full-width layout**.
+All main pages use a full-width layout.
 
 Sidebars are intentionally excluded.
 
 Reasons:
 
-- cleaner layout
-- better readability
-- improved mobile experience
-- modern appearance
-- easier maintenance
+- Better readability
+- Cleaner layout
+- Improved mobile experience
+- Simpler maintenance
+- Modern appearance
 
 ---
 
@@ -219,7 +201,7 @@ Reasons:
 
 **Status:** Approved
 
-Every page follows the same logical structure.
+Every page follows the same structure.
 
 ```
 Page Title
@@ -241,11 +223,129 @@ Related Content (optional)
 Footer
 ```
 
-This layout guarantees visual consistency across the entire website.
+This guarantees consistency across the website.
 
 ---
 
-# D011 – Development Strategy
+# D011 – Affiliation
+
+**Status:** Approved
+
+Each personal profile displays only the institutional affiliation.
+
+Examples:
+
+- University of Naples Parthenope
+- University of Salerno
+- National Research Council (CNR)
+- Delft University of Technology
+
+Departments are intentionally omitted.
+
+---
+
+# D012 – Version 1 Scope
+
+**Status:** Approved
+
+Version 1 adopts the same profile structure for every category.
+
+No exceptions are made for Faculty, Researchers, PhD Students, Collaborators or Past Members.
+
+More advanced sections may be introduced in future releases.
+
+---
+
+# D013 – Research Structure
+
+**Status:** Approved
+
+The Research page is organised into three main areas.
+
+- Positioning
+- Navigation
+- Remote Sensing
+
+Navigation includes:
+
+- Maritime Navigation
+- Air Navigation
+- Integrated Navigation
+
+---
+
+# D014 – Official PANG Statement
+
+**Status:** Approved
+
+The official description of the research group is:
+
+> The PArthenope Navigation Group (PANG) brings together faculty members, researchers, PhD students and collaborators conducting research in positioning, maritime and air navigation, geospatial technologies, and resilient Positioning, Navigation and Timing (PNT).
+
+This statement is used throughout the website and in the project documentation.
+
+---
+
+# D015 – Editorial Workflow
+
+**Status:** Approved
+
+Content is created before implementation.
+
+Workflow:
+
+```
+Legacy Drupal
+
+↓
+
+Content Extraction
+
+↓
+
+Editorial Review
+
+↓
+
+Repository
+
+↓
+
+WordPress
+```
+
+Repository files are considered the editorial source.
+
+WordPress is the publishing platform.
+
+---
+
+# D016 – Repository Structure
+
+**Status:** Approved
+
+```
+pang-next/
+│
+├── README.md
+├── .gitignore
+│
+├── docs/
+├── pages/
+├── content/
+├── branding/
+├── migration/
+├── wordpress/
+└── assets/
+```
+
+Only project documentation, custom code and editorial assets are versioned.
+
+The complete WordPress installation is intentionally excluded.
+
+---
+
+# D017 – Development Strategy
 
 **Status:** Approved
 
@@ -265,86 +365,23 @@ The objective is to publish Version 1 within one month.
 
 ---
 
-# D012 – Editorial Workflow
+# D018 – MVP Principle
 
 **Status:** Approved
 
-Content is created before implementation.
+Every implementation decision must answer the following question:
 
-Workflow:
+> Does this help us publish Version 1 within one month?
 
-```
-Legacy Drupal
+If the answer is **yes**, the feature is included.
 
-↓
-
-Extraction
-
-↓
-
-Editorial Review
-
-↓
-
-Repository
-
-↓
-
-WordPress
-```
-
-Content is never written directly inside WordPress.
-
-Repository files are considered the authoritative editorial source.
-
----
-
-# D013 – Repository Structure
-
-**Status:** Approved
-
-The repository contains only project assets developed by the team.
-
-```
-pang-next/
-│
-├── README.md
-├── .gitignore
-│
-├── docs/
-├── pages/
-├── content/
-├── branding/
-├── migration/
-├── wordpress/
-└── assets/
-```
-
-The complete WordPress installation is **not** versioned.
-
-Only custom code, documentation and project assets are stored in Git.
-
----
-
-# D014 – Minimum Viable Product
-
-**Status:** Approved
-
-Version 1 of PANG Next includes only the functionality required for publication.
-
-Features postponed to Version 2 include:
-
-- Automatic IRIS synchronization
-- ORCID synchronization
-- Dynamic publication filtering
-- Research metrics
-- Advanced search
-- Interactive collaboration map
+Otherwise, it is postponed to Version 2.
 
 ---
 
 # Revision History
 
 | Version | Date | Description |
-|---------|------|-------------|
-| 1.0 | 2026-08-07 | Initial approved decisions |
+|----------|------------|------------------------------|
+| 1.0 | 2026-08-07 | Initial version |
+| 2.0 | 2026-08-07 | Consolidated architectural decisions |
