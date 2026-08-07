@@ -1,9 +1,9 @@
-# PANG People 0.4.0
+# PANG People 0.4.1
 
-Adds:
-- People > Order People drag-and-drop ordering by category.
-- Existing profile fields and frontend layouts from 0.3.
+Changes from 0.4.0:
+- Renames Collaborators to Associated Members.
+- Automatically migrates existing people assigned to Collaborators.
+- Updates People ordering UI to use Associated Members.
+- Adds the Associated Members badge style.
 
-Important:
-The importer plugin is separate. After import verification, it can be deactivated.
-Manual profile edits are stored in WordPress and are preserved by this update.
+Existing profile data, images, ordering and external academic links are preserved.
