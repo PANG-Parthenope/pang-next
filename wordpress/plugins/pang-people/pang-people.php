@@ -2,7 +2,7 @@
 /**
  * Plugin Name: PANG People
  * Description: Structured People profiles for PANG Next.
- * Version: 0.4.1
+ * Version: 0.5.0
  * Author: PArthenope Navigation Group
  */
 
@@ -66,17 +66,50 @@ function pang_people_migrate_associated_members_term() {
     }
 }
 
+
+function pang_people_migrate_students_term() {
+    $new = get_term_by( 'name', 'Students', 'pang_person_category' );
+
+    if ( ! $new ) {
+        $inserted = wp_insert_term( 'Students', 'pang_person_category' );
+        if ( ! is_wp_error( $inserted ) ) {
+            $new = get_term( $inserted['term_id'], 'pang_person_category' );
+        }
+    }
+
+    if ( ! $new || is_wp_error( $new ) ) return;
+
+    foreach ( array( 'PhD Students', 'PhD & Visiting Students' ) as $old_name ) {
+        $old = get_term_by( 'name', $old_name, 'pang_person_category' );
+        if ( ! $old ) continue;
+
+        $person_ids = get_objects_in_term( $old->term_id, 'pang_person_category' );
+        if ( ! is_wp_error( $person_ids ) ) {
+            foreach ( $person_ids as $person_id ) {
+                wp_set_object_terms(
+                    (int) $person_id,
+                    array( (int) $new->term_id ),
+                    'pang_person_category',
+                    false
+                );
+            }
+        }
+        wp_delete_term( $old->term_id, 'pang_person_category' );
+    }
+}
+
 function pang_people_activate() {
     pang_people_register_types();
 
-    foreach ( array( 'Faculty', 'Researchers', 'Associated Members', 'PhD Students', 'Past Members' ) as $term ) {
+    foreach ( array( 'Faculty', 'Researchers', 'Associated Members', 'Students', 'Past Members' ) as $term ) {
         if ( ! term_exists( $term, 'pang_person_category' ) ) {
             wp_insert_term( $term, 'pang_person_category' );
         }
     }
 
     pang_people_migrate_associated_members_term();
-    update_option( 'pang_people_version', '0.4.1' );
+    pang_people_migrate_students_term();
+    update_option( 'pang_people_version', '0.5.0' );
     flush_rewrite_rules();
 }
 register_activation_hook( __FILE__, 'pang_people_activate' );
@@ -84,9 +117,10 @@ register_activation_hook( __FILE__, 'pang_people_activate' );
 function pang_people_upgrade_if_needed() {
     $current = get_option( 'pang_people_version' );
 
-    if ( '0.4.1' !== $current ) {
+    if ( '0.5.0' !== $current ) {
         pang_people_migrate_associated_members_term();
-        update_option( 'pang_people_version', '0.4.1' );
+        pang_people_migrate_students_term();
+        update_option( 'pang_people_version', '0.5.0' );
     }
 }
 add_action( 'init', 'pang_people_upgrade_if_needed', 30 );
@@ -360,7 +394,7 @@ function pang_people_order_page() {
         'Faculty',
         'Researchers',
         'Associated Members',
-        'PhD Students',
+        'Students',
         'Past Members',
     );
 
@@ -443,7 +477,7 @@ function pang_people_styles() { ?>
 .pang-badge--faculty{background:#e4eef9;color:#174f86}
 .pang-badge--researchers{background:#e5f5eb;color:#247043}
 .pang-badge--associated-members{background:#f0e7f7;color:#68428a}
-.pang-badge--phd-students{background:#fff4cc;color:#775d00}
+.pang-badge--students{background:#fff4cc;color:#775d00}
 .pang-badge--past-members{background:#eceff1;color:#5f6870}
 .pang-profile-head{display:grid;grid-template-columns:minmax(180px,300px) 1fr;gap:40px;align-items:center;margin:8px 0 32px}
 .pang-profile-photo img{width:100%;border-radius:14px}.pang-profile-position{font-size:1.15rem;font-weight:600;margin:16px 0 6px}

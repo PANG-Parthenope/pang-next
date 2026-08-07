@@ -1,9 +1,12 @@
-# PANG People 0.4.1
+# PANG People 0.5.0
 
-Changes from 0.4.0:
-- Renames Collaborators to Associated Members.
-- Automatically migrates existing people assigned to Collaborators.
-- Updates People ordering UI to use Associated Members.
-- Adds the Associated Members badge style.
+Changes:
+- Introduces the definitive `Students` category.
+- `Students` groups PhD, Visiting, Master's and Bachelor's students.
+- Automatically migrates members from either `PhD Students` or `PhD & Visiting Students`.
+- Preserves Faculty, Researchers, Associated Members and Past Members.
+- Preserves profiles, images, manual ordering, biography, research interests and academic-profile links.
 
-Existing profile data, images, ordering and external academic links are preserved.
+After updating WordPress, change the People-page shortcode to:
+
+`[pang_people category="Students"]`
