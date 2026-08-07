@@ -1,65 +1,64 @@
 # PANG Next
 
-# 03 – Project Decisions
+## 03 – Project Decisions
 
-**Version:** 2.0
-
-**Status:** Approved
-
+**Version:** 3.0  
+**Status:** Active  
 **Last Update:** 2026-08-07
 
 ---
 
-# Purpose
+## Purpose
 
 This document records the architectural, editorial and technical decisions adopted during the development of **PANG Next**.
 
 Approved decisions are considered stable and constitute the reference for the implementation of the website.
 
+A decision may be changed only when a later decision explicitly supersedes it.
+
 ---
 
-# D001 – People Structure
+## D001 – People Structure
 
 **Status:** Approved
 
-The website contains a single **People** page organised into the following sections.
+The website contains a single **People** page organised into the following sections:
 
-```
-People
-├── Faculty
-├── Researchers
-├── PhD Students
-├── Collaborators
-└── Past Members
-```
+1. Faculty
+2. Researchers
+3. Collaborators
+4. PhD Students
+5. Past Members
 
-The page does not use internal navigation menus.
+The page does not use navigation submenus.
 
 ---
 
-# D002 – Category Badges
+## D002 – Category Badges
 
 **Status:** Approved
 
 Each member card displays a coloured badge identifying the member category.
 
-| Category | Colour |
-|----------|--------|
+| Category | Badge Colour |
+|---|---|
 | Faculty | Blue |
 | Researchers | Green |
-| PhD Students | Yellow |
 | Collaborators | Purple |
+| PhD Students | Yellow |
 | Past Members | Grey |
+
+The same category information is also displayed in the individual profile.
 
 ---
 
-# D003 – Main Navigation
+## D003 – Main Navigation
 
 **Status:** Approved
 
-The website adopts a flat navigation model.
+PANG Next adopts a flat navigation model.
 
-The main navigation contains only:
+The main navigation contains:
 
 - Home
 - About
@@ -73,25 +72,27 @@ The main navigation contains only:
 
 Dropdown menus are intentionally avoided.
 
----
-
-# D004 – Collaborators
-
-**Status:** Approved
-
-Researchers belonging to external universities or research institutions and actively collaborating with PANG are classified as **Collaborators**.
-
-Collaborators are **not** considered Past Members.
-
-Past Members include only former members who no longer actively collaborate with the group.
+Subsections are organised inside their corresponding main pages.
 
 ---
 
-# D005 – People Cards
+## D004 – Collaborators
 
 **Status:** Approved
 
-All member cards follow the same layout.
+Researchers belonging to external universities, research centres or other institutions and actively collaborating with PANG are classified as **Collaborators**.
+
+Collaborators are not considered Past Members.
+
+**Past Members** includes only people who previously belonged to or collaborated with PANG and are no longer actively involved with the group.
+
+---
+
+## D005 – People Cards
+
+**Status:** Approved
+
+All People cards use the same basic layout.
 
 Each card contains:
 
@@ -100,22 +101,24 @@ Each card contains:
 - Academic Position
 - Affiliation
 - Category Badge
-- View Profile
 
-The following information is intentionally excluded:
+The card links to the individual profile.
+
+The following information is intentionally excluded from the card:
 
 - Biography
+- Research Interests
 - Publications
 - Contact information
-- Research interests
+- External academic profiles
 
 ---
 
-# D006 – Personal Profile
+## D006 – Personal Profile
 
 **Status:** Approved
 
-Each member has an individual profile page.
+All individual profiles use the same structure in Version 1.
 
 The profile contains:
 
@@ -123,235 +126,243 @@ The profile contains:
 - Full Name
 - Academic Position
 - Affiliation
-- Category
+- Category Badge
 
-Sections:
+Profile sections:
 
 - Biography
 - Research Interests
-- Selected Publications
 
-External Profiles:
+External academic profiles, when available:
 
 - ORCID
 - Google Scholar
 - Scopus
 
-Projects, news and other dynamic information are intentionally excluded from Version 1.
+Publications are intentionally not duplicated inside the People data model.
+
+Scientific publications belong to the dedicated **Publications** section of the website.
+
+Projects, news, academic roles and other dynamic information are postponed to future versions.
 
 ---
 
-# D007 – One Page, One Purpose
+## D007 – One Page, One Purpose
 
 **Status:** Approved
 
-Each page has a single objective.
+Each main page has one primary purpose.
 
 | Page | Purpose |
-|------|---------|
-| Home | Present the research group |
-| About | Present PANG |
-| Research | Present research activities |
-| People | Present team members |
+|---|---|
+| Home | Present PANG and provide access to its main activities |
+| About | Present the group and its identity |
+| Research | Present research activities and expertise |
+| People | Present members and collaborators |
 | Projects | Present research projects |
-| Publications | Browse scientific publications |
-| News | Present recent activities |
+| Publications | Present and browse scientific publications |
+| News | Present recent activities and announcements |
 | Resources | Present software and datasets |
-| Contacts | Contact information |
+| Contacts | Provide contact information |
+
+Pages should avoid unnecessary duplication of information belonging to another section.
 
 ---
 
-# D008 – People Ordering
+## D008 – People Ordering
 
-**Status:** Approved
+**Status:** Approved — Updated
 
-Members are not ordered alphabetically.
-
-Categories appear in the following order:
+People categories are displayed in the following order:
 
 1. Faculty
 2. Researchers
-3. PhD Students
-4. Collaborators
+3. Collaborators
+4. PhD Students
 5. Past Members
 
-Members inside each category are ordered manually.
+Members are not automatically ordered alphabetically.
+
+Within each category, the order is managed manually through the **PANG People** WordPress plugin.
+
+This allows the displayed order to reflect the organisation of the research group rather than an arbitrary alphabetical sequence.
 
 ---
 
-# D009 – Full Width Layout
+## D009 – Full Width Layout
 
 **Status:** Approved
 
-All main pages use a full-width layout.
+Main website pages use a full-width layout without sidebars.
 
-Sidebars are intentionally excluded.
+Reasons include:
 
-Reasons:
-
-- Better readability
-- Cleaner layout
-- Improved mobile experience
-- Simpler maintenance
-- Modern appearance
+- better readability;
+- cleaner visual hierarchy;
+- improved responsive behaviour;
+- simpler maintenance;
+- more contemporary presentation.
 
 ---
 
-# D010 – Standard Page Layout
+## D010 – Standard Page Layout
 
 **Status:** Approved
 
-Every page follows the same structure.
+Main pages follow a common logical structure:
 
-```
+```text
 Page Title
-
-↓
 
 Short Introduction
 
-↓
-
 Main Content
 
-↓
-
 Related Content (optional)
-
-↓
 
 Footer
 ```
 
-This guarantees consistency across the website.
+The objective is to maintain visual and navigational consistency throughout PANG Next.
 
 ---
 
-# D011 – Affiliation
+## D011 – Affiliation
 
 **Status:** Approved
 
-Each personal profile displays only the institutional affiliation.
+People profiles display the institutional affiliation only.
 
 Examples:
 
 - University of Naples Parthenope
-- University of Salerno
-- National Research Council (CNR)
-- Delft University of Technology
+- University of Messina
+- Joint Research Centre
+- École Nationale de l'Aviation Civile
 
-Departments are intentionally omitted.
-
----
-
-# D012 – Version 1 Scope
-
-**Status:** Approved
-
-Version 1 adopts the same profile structure for every category.
-
-No exceptions are made for Faculty, Researchers, PhD Students, Collaborators or Past Members.
-
-More advanced sections may be introduced in future releases.
+Departments are intentionally omitted from the People interface.
 
 ---
 
-# D013 – Research Structure
+## D012 – Version 1 People Scope
 
 **Status:** Approved
 
-The Research page is organised into three main areas.
+Version 1 uses the same profile structure for:
+
+- Faculty
+- Researchers
+- Collaborators
+- PhD Students
+- Past Members
+
+No category-specific profile variants are introduced in Version 1.
+
+This keeps the interface consistent and reduces maintenance.
+
+---
+
+## D013 – Research Structure
+
+**Status:** Approved
+
+The Research section must represent the multidisciplinary expertise of PANG.
+
+The principal scientific themes include:
 
 - Positioning
 - Navigation
-- Remote Sensing
+- Geospatial Technologies
 
-Navigation includes:
+Navigation explicitly includes:
 
 - Maritime Navigation
 - Air Navigation
 - Integrated Navigation
 
+Remote sensing expertise is represented within the broader area of **Geospatial Technologies**.
+
+Naval architecture is not presented as a separate top-level research area; relevant expertise is integrated into the maritime domain.
+
 ---
 
-# D014 – Official PANG Statement
+## D014 – Official PANG Statement
 
 **Status:** Approved
 
-The official description of the research group is:
+The official concise description of the research group is:
 
 > The PArthenope Navigation Group (PANG) brings together faculty members, researchers, PhD students and collaborators conducting research in positioning, maritime and air navigation, geospatial technologies, and resilient Positioning, Navigation and Timing (PNT).
 
-This statement is used throughout the website and in the project documentation.
+This statement may be reused, with minor contextual adaptations, in:
+
+- Home
+- About
+- People
+- project documentation
+- institutional communication
 
 ---
 
-# D015 – Editorial Workflow
+## D015 – Editorial Workflow
 
 **Status:** Approved
 
-Content is created before implementation.
+Legacy content is not copied blindly into WordPress.
 
-Workflow:
+The editorial workflow is:
 
-```
+```text
 Legacy Drupal
-
-↓
-
+      ↓
 Content Extraction
-
-↓
-
+      ↓
 Editorial Review
-
-↓
-
+      ↓
 Repository
-
-↓
-
+      ↓
 WordPress
 ```
 
-Repository files are considered the editorial source.
+The repository contains the reviewed editorial source material.
 
 WordPress is the publishing platform.
 
 ---
 
-# D016 – Repository Structure
+## D016 – Repository Structure
 
 **Status:** Approved
 
-```
+The repository contains project documentation, reviewed content, assets and custom source code.
+
+```text
 pang-next/
-│
 ├── README.md
 ├── .gitignore
-│
-├── docs/
-├── pages/
-├── content/
 ├── branding/
+├── content/
+├── docs/
 ├── migration/
-├── wordpress/
-└── assets/
+├── pages/
+└── wordpress/
+    ├── plugins/
+    └── themes/
 ```
 
-Only project documentation, custom code and editorial assets are versioned.
+The complete Local/WordPress runtime installation is not versioned.
 
-The complete WordPress installation is intentionally excluded.
+Installation ZIP files and temporary migration tools are not part of the permanent repository.
 
 ---
 
-# D017 – Development Strategy
+## D017 – Development Strategy
 
 **Status:** Approved
 
-Development follows an incremental approach.
+Development is incremental and release-oriented.
 
-Priority:
+Current priority:
 
 1. People
 2. Home
@@ -360,28 +371,106 @@ Priority:
 5. Publications
 6. News
 7. Resources
+8. Contacts and final deployment checks
 
-The objective is to publish Version 1 within one month.
+The immediate objective is to make a credible public version of PANG available as quickly as possible.
 
 ---
 
-# D018 – MVP Principle
+## D018 – MVP / Public-Light Principle
 
 **Status:** Approved
 
-Every implementation decision must answer the following question:
+Version 1 prioritises information required by external visitors, research partners and proposal reviewers.
 
-> Does this help us publish Version 1 within one month?
+A feature is included in the first public release when it materially improves the ability to understand:
 
-If the answer is **yes**, the feature is included.
+- who PANG is;
+- who participates in the group;
+- the group's scientific expertise;
+- its projects;
+- its scientific output;
+- how to contact or verify the group.
 
-Otherwise, it is postponed to Version 2.
+Non-essential functionality is postponed.
+
+Examples of postponed functionality include:
+
+- automatic IRIS synchronisation;
+- automatic ORCID synchronisation;
+- research metrics;
+- advanced publication filtering;
+- interactive collaboration maps;
+- decorative animations.
 
 ---
 
-# Revision History
+## D019 – PANG People Implementation
+
+**Status:** Implemented
+
+The People section is implemented through the custom WordPress plugin:
+
+```text
+PANG People
+Version 0.4.0
+```
+
+Permanent source code is stored in:
+
+```text
+wordpress/plugins/pang-people/
+```
+
+The plugin provides:
+
+- structured Person content;
+- People categories;
+- academic position;
+- affiliation;
+- biography;
+- research interests;
+- ORCID;
+- Google Scholar;
+- Scopus;
+- featured photographs;
+- category badges;
+- responsive People grids;
+- individual profiles;
+- manual ordering by category.
+
+Temporary importer and synchronisation plugins are removed after use and are not part of the permanent project.
+
+---
+
+## D020 – People Master Dataset
+
+**Status:** Approved
+
+The reviewed master dataset for the initial People migration is:
+
+```text
+content/people/people-review_02.csv
+```
+
+This dataset supersedes earlier intermediate CSV files.
+
+The original People photographs are retained in:
+
+```text
+content/people/images/
+```
+
+Original photographs are preferred over automatically cropped or regenerated versions.
+
+Image presentation and visual consistency are handled by the website layout whenever possible.
+
+---
+
+## Revision History
 
 | Version | Date | Description |
-|----------|------------|------------------------------|
-| 1.0 | 2026-08-07 | Initial version |
-| 2.0 | 2026-08-07 | Consolidated architectural decisions |
+|---|---|---|
+| 1.0 | 2026-08-07 | Initial decisions |
+| 2.0 | 2026-08-07 | Consolidated architecture and editorial decisions |
+| 3.0 | 2026-08-07 | People V1 implementation and public-light strategy |
