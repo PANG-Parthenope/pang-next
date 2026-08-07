@@ -1,0 +1,41 @@
+/*
+Theme Name: PANG Blocksy Child
+Theme URI: https://www.panglab.eu/
+Description: Child theme for PANG Next, based on Blocksy.
+Author: PArthenope Navigation Group
+Author URI: https://www.panglab.eu/
+Template: blocksy
+Version: 0.1.0
+Text Domain: pang-blocksy-child
+*/
+
+:root {
+  --pang-navy: #0B2D48;
+  --pang-ocean: #006DAA;
+  --pang-teal: #1C8A7A;
+  --pang-light: #F4F6F8;
+  --pang-accent: #F28C28;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+}
+
+.pang-kicker {
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pang-section {
+  padding-block: clamp(3rem, 6vw, 6rem);
+}
+
+.pang-card {
+  border: 1px solid rgba(11, 45, 72, 0.12);
+  border-radius: 12px;
+  padding: 1.5rem;
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(11, 45, 72, 0.06);
+}

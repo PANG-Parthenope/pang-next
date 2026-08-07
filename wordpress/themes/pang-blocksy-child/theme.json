@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "760px",
+      "wideSize": "1280px"
+    },
+    "color": {
+      "palette": [
+        {"slug": "pang-navy", "name": "PANG Navy", "color": "#0B2D48"},
+        {"slug": "pang-ocean", "name": "PANG Ocean", "color": "#006DAA"},
+        {"slug": "pang-teal", "name": "PANG Teal", "color": "#1C8A7A"},
+        {"slug": "pang-light", "name": "PANG Light", "color": "#F4F6F8"},
+        {"slug": "pang-accent", "name": "PANG Accent", "color": "#F28C28"}
+      ]
+    },
+    "typography": {
+      "fluid": true
+    }
+  }
+}
