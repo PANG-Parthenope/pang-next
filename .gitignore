@@ -1,25 +1,36 @@
 # macOS
 .DS_Store
 
-# VS Code
+# VS Code local settings
 .vscode/
-
-# Logs
-*.log
 
 # Temporary files
 *.tmp
+*.log
+*~
 
-# LocalWP
-Local Sites/
-
-# Node
-node_modules/
-
-# Composer
-vendor/
-
-# Backup
+# Archives and installation packages
 *.zip
+*.tar
+*.tar.gz
+
+# Database dumps and backups
 *.sql
 *.sql.gz
+*.bak
+
+# Dependencies
+node_modules/
+vendor/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# WordPress runtime files
+wp-config.php
+wp-content/uploads/
+
+# Local by Flywheel / Local runtime
+Local Sites/
