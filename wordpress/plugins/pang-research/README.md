@@ -1,23 +1,29 @@
-# PANG People 0.6.4
+# PANG Research 0.3.0
 
-Consolidated People V1 release.
+Clean rebuild of the permanent PANG Research plugin.
 
-## Overview
-- Four profiles per row on desktop.
-- Circular 180 px portraits.
-- Per-person vertical focal-position control.
-- Lightweight grid without card borders/backgrounds.
-- Full Name, Academic Position and Institutional Affiliation.
-- Category badges omitted from the overview grid.
-- Responsive tablet/mobile layout.
-- Manual ordering by category.
-- Individual profiles retain Biography, Research Interests, ORCID, Google Scholar, Scopus and category badge.
+## Research page
+- `[pang_projects status="ongoing"]` shows all ongoing projects once.
+- `[pang_projects status="completed"]` shows all completed projects once.
+- Duplicate imported records are collapsed by canonical acronym/project identity.
+- Cards use the approved presentation: acronym, full title in italics, description, metadata and Research Area pills.
 
-## Data architecture
-The permanent plugin no longer bundles a copy of the editorial People CSV.
+## Home
+- `[pang_selected_projects]` shows only projects with `Selected Project = Yes`.
+- Selected status does not affect the Research page.
 
-The authoritative reviewed dataset belongs in the project repository under:
+## Editing
+Research Projects can be maintained directly in WordPress via the structured project fields.
 
-`content/people/`
 
-This avoids duplicate CSV copies diverging between project content and plugin source. Future bulk updates should use temporary reviewed migration/synchronisation tools rather than embedding the master dataset in the permanent plugin.
+## Version 0.3.1
+
+- Fixes duplicate project cards caused by legacy/imported records whose acronym metadata contained the full project title.
+- Canonical identity is now derived primarily from the project title prefix (before dash/colon).
+- Keeps only the best structured record at render time.
+- No data re-import required.
+
+
+## 0.3.2
+- Home Selected Projects cards restyled to match Latest News: white bordered cards, blue top accent, subtle shadow, equal heights and hover treatment.
+- Data model and shortcode `[pang_selected_projects]` unchanged.

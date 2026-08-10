@@ -1,0 +1,372 @@
+/* PANG News Display 1.0.4 — force the same clean system sans-serif used by the site UI.
+   Do not use WordPress font preset variables here: on this installation one resolves to a monospace face. */
+.pang-news-archive,
+.pang-news-archive *,
+.pang-home-news,
+.pang-home-news *{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif !important;
+  font-style:normal;
+}
+.pang-news-archive button,.pang-news-archive input,.pang-news-archive select,.pang-news-archive textarea,
+.pang-home-news button,.pang-home-news input,.pang-home-news select,.pang-home-news textarea{font:inherit !important}
+:root{--pang-blue:#092f63;--pang-blue-2:#0c4f9f;--pang-ink:#10233f;--pang-muted:#5c6878;--pang-line:#e3e8ef;--pang-bg:#f6f8fb}
+.pang-news-wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
+.pang-news-hero{background:linear-gradient(135deg,#062653,#0a4d91);color:#fff;padding:56px 0 52px;margin-bottom:40px}
+.pang-news-hero h1{margin:0 0 8px;font-size:clamp(36px,5vw,56px);line-height:1.05;color:#fff}
+.pang-news-hero p{max-width:720px;margin:0;color:rgba(255,255,255,.86);font-size:18px;line-height:1.55;font-weight:400;letter-spacing:0}
+.pang-news-layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:34px;align-items:start;padding-bottom:60px}
+.pang-news-filters{position:sticky;top:110px;border-right:1px solid var(--pang-line);padding-right:24px}
+.pang-news-filter-group+ .pang-news-filter-group{margin-top:30px;padding-top:24px;border-top:1px solid var(--pang-line)}
+.pang-news-filter-group h2{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--pang-blue-2);margin:0 0 10px;font-weight:700}
+.pang-news-filter-group a{display:block;text-decoration:none;color:var(--pang-ink);padding:8px 10px;border-radius:6px;margin:2px 0;font-size:15px;line-height:1.4;font-weight:400}
+.pang-news-filter-group a:hover,.pang-news-filter-group a.is-active{background:#eaf1fb;color:var(--pang-blue-2)}
+.pang-news-results__head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;color:var(--pang-muted);font-size:14px;line-height:1.4}
+.pang-news-results__head a,.pang-home-news__head a{color:var(--pang-blue-2);text-decoration:none;font-weight:600}
+.pang-news-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.pang-news-card{background:#fff;border:1px solid var(--pang-line);border-radius:8px;overflow:hidden;box-shadow:0 3px 14px rgba(17,42,76,.06);display:flex;flex-direction:column;min-width:0}
+.pang-news-card__top{min-height:116px;padding:18px;background:linear-gradient(135deg,#0b356c,#0f5ea9);display:flex;align-items:flex-start;justify-content:space-between;gap:12px;color:#fff}
+.pang-news-date{width:58px;min-width:58px;padding:8px 6px;border:1px solid rgba(255,255,255,.42);border-radius:5px;background:rgba(0,0,0,.12);text-align:center;line-height:1}
+.pang-news-date strong{display:block;font-size:21px}.pang-news-date span{display:block;margin-top:4px;font-size:10px;font-weight:700}.pang-news-date small{display:block;margin-top:4px;font-size:10px}
+.pang-news-card__category{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;text-align:right;opacity:.92}
+.pang-news-card__body{padding:18px;display:flex;flex-direction:column;flex:1}
+.pang-news-card h3{font-size:18px;line-height:1.35;margin:0 0 12px;color:var(--pang-ink);font-weight:700;letter-spacing:0}
+.pang-news-card h3 a{color:inherit;text-decoration:none}.pang-news-card h3 a:hover{color:var(--pang-blue-2)}
+.pang-news-card p{font-size:14px;line-height:1.6;color:var(--pang-muted);margin:0 0 18px;font-weight:400;letter-spacing:0}
+.pang-news-card__link{margin-top:auto;text-decoration:none;color:var(--pang-blue-2);font-size:14px;font-weight:600;letter-spacing:0}
+.pang-news-pagination{display:flex;gap:8px;justify-content:center;margin-top:30px}.pang-news-pagination a{display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--pang-line);border-radius:5px;text-decoration:none;color:var(--pang-ink);background:#fff}.pang-news-pagination a.is-active{background:var(--pang-blue-2);border-color:var(--pang-blue-2);color:#fff}
+.pang-home-news{padding:40px 0}.pang-home-news__head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.pang-home-news__head h2{margin:0;color:var(--pang-ink);font-size:30px}.pang-home-news__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:stretch;grid-auto-rows:1fr}.pang-news-card--compact .pang-news-card__top{min-height:98px}.pang-news-card--compact .pang-news-card__body{padding:15px}.pang-news-card--compact h3{font-size:16px}.pang-news-card--compact .pang-news-card__link{font-size:13px}
+.pang-news-notice{padding:22px;background:var(--pang-bg);border:1px solid var(--pang-line);border-radius:7px;color:var(--pang-muted)}
+@media(max-width:980px){.pang-news-layout{grid-template-columns:1fr}.pang-news-filters{position:static;border-right:0;border-bottom:1px solid var(--pang-line);padding:0 0 22px;display:grid;grid-template-columns:1fr 1fr;gap:24px}.pang-news-filter-group+ .pang-news-filter-group{margin:0;padding:0;border:0}.pang-news-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pang-home-news__grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.pang-news-wrap{width:min(100% - 28px,1180px)}.pang-news-hero{padding:38px 0}.pang-news-filters{grid-template-columns:1fr}.pang-news-filter-group+ .pang-news-filter-group{margin-top:12px;padding-top:16px;border-top:1px solid var(--pang-line)}.pang-news-grid,.pang-home-news__grid{grid-template-columns:1fr}.pang-home-news__head{align-items:flex-end}.pang-home-news__head h2{font-size:26px}}
+
+/* Home cards — compact editorial treatment, distinct from archive cards. */
+.pang-home-news{padding:44px 0 48px}
+.pang-home-news__head{margin-bottom:22px}
+.pang-home-news__head h2{font-size:clamp(28px,3vw,36px);line-height:1.15;font-weight:700;color:var(--pang-ink)}
+.pang-home-news__head a{font-size:14px;font-weight:600}
+.pang-home-news__grid{gap:18px}
+.pang-news-card--compact{height:100%;border-radius:8px;box-shadow:0 2px 12px rgba(17,42,76,.05);transition:transform .18s ease,box-shadow .18s ease}
+.pang-news-card--compact:hover{transform:translateY(-2px);box-shadow:0 7px 20px rgba(17,42,76,.09)}
+.pang-news-card--compact .pang-news-card__accent{height:4px;background:linear-gradient(90deg,#0c4f9f,#2b83d6)}
+.pang-news-card--compact .pang-news-card__body{padding:20px 20px 18px;height:100%}
+.pang-news-card--compact .pang-news-card__meta{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px;font-size:12px;line-height:1.3;color:var(--pang-muted);text-transform:uppercase;letter-spacing:.035em;font-weight:600}
+.pang-news-card--compact .pang-news-card__meta span{color:var(--pang-blue-2);text-align:right}
+.pang-news-card--compact h3{font-size:18px;line-height:1.35;margin:0 0 10px;font-weight:700;min-height:4.05em}
+.pang-news-card--compact p{font-size:14px;line-height:1.55;margin:0 0 18px;color:var(--pang-muted);min-height:4.65em}
+.pang-news-card--compact .pang-news-card__link{font-size:14px;font-weight:600}
+@media(max-width:980px){.pang-news-card--compact h3{font-size:17px}}
+
+/* 1.0.5 — Home alignment with Selected Projects / Selected Papers. */
+.pang-home-news{
+  padding:0;
+  margin:0;
+}
+/* The shortcode may sit inside a Gutenberg column: do not create a second 1180px container. */
+.pang-home-news > .pang-news-wrap{
+  width:100%;
+  max-width:none;
+  margin:0;
+}
+.pang-home-news__head{
+  display:block;
+  margin:0 0 28px;
+}
+.pang-home-news__head h2{
+  margin:0;
+  font-size:clamp(34px,3.2vw,48px);
+  line-height:1.1;
+  font-weight:700;
+  color:var(--pang-ink);
+}
+.pang-home-news__head h2::after{
+  content:"";
+  display:block;
+  width:80px;
+  height:4px;
+  margin-top:30px;
+  background:#2b83d6;
+}
+.pang-home-news__grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:20px;
+}
+.pang-news-card--compact h3,
+.pang-news-card--compact h3 a{
+  color:var(--pang-blue-2) !important;
+}
+.pang-news-card--compact .pang-news-card__meta{
+  justify-content:flex-start;
+  margin-bottom:12px;
+  color:var(--pang-muted);
+  text-transform:uppercase;
+  letter-spacing:.035em;
+}
+.pang-home-news__footer{
+  margin-top:24px;
+}
+.pang-home-news__footer a{
+  color:var(--pang-blue-2);
+  text-decoration:none;
+  font-size:16px;
+  line-height:1.4;
+  font-weight:600;
+}
+.pang-home-news__footer a:hover{
+  text-decoration:underline;
+}
+@media(max-width:980px){
+  .pang-home-news__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:620px){
+  .pang-home-news__grid{grid-template-columns:1fr}
+  .pang-home-news__head h2{font-size:32px}
+}
+
+/* 1.0.7 — Match Home section heading hierarchy with Selected Projects. */
+.pang-home-news__head h3{
+  margin:0;
+  font-size:clamp(28px,2.6vw,38px);
+  line-height:1.15;
+  font-weight:700;
+  color:var(--pang-ink);
+}
+.pang-home-news__head h3::after{
+  content:"";
+  display:block;
+  width:80px;
+  height:4px;
+  margin-top:26px;
+  background:#2b83d6;
+}
+@media(max-width:620px){
+  .pang-home-news__head h3{font-size:28px}
+}
+
+/* 1.0.8 — Align Latest News with the Selected Projects heading in Gutenberg columns. */
+.pang-home-news--aligned{
+  position:relative;
+  top:-112px;
+  margin-bottom:-112px;
+}
+.pang-home-news--aligned .pang-home-news__head{
+  margin:0 0 44px !important;
+  padding:0 !important;
+}
+.pang-home-news--aligned .pang-home-news__head h3{
+  display:block !important;
+  margin:0 !important;
+  padding:0 !important;
+  font-size:clamp(32px,2.8vw,40px) !important;
+  line-height:1.15 !important;
+  font-weight:700 !important;
+  color:var(--pang-ink) !important;
+}
+.pang-home-news--aligned .pang-home-news__head h3::after{
+  content:"" !important;
+  display:block !important;
+  width:80px !important;
+  height:4px !important;
+  margin:30px 0 0 !important;
+  padding:0 !important;
+  background:#2b83d6 !important;
+  border:0 !important;
+}
+@media(max-width:980px){
+  .pang-home-news--aligned{
+    top:0;
+    margin-bottom:0;
+  }
+}
+
+/* 1.0.9 — Final Home alignment refinements. */
+.pang-home-news--aligned{
+  top:-245px !important;
+  margin-bottom:-245px !important;
+}
+.pang-home-news--aligned .pang-home-news__head{
+  margin:0 0 44px !important;
+  padding:0 !important;
+}
+.pang-home-news--aligned .pang-home-news__head h3{
+  margin:0 !important;
+  padding:0 !important;
+  font-size:clamp(32px,2.8vw,40px) !important;
+  line-height:1.15 !important;
+  font-weight:700 !important;
+  color:var(--pang-ink) !important;
+}
+.pang-home-news--aligned .pang-home-news__head h3::after{
+  content:none !important;
+  display:none !important;
+}
+.pang-home-news__separator{
+  display:block !important;
+  width:80px !important;
+  height:4px !important;
+  margin:30px 0 0 !important;
+  padding:0 !important;
+  background:#2b83d6 !important;
+  border:0 !important;
+}
+/* Use the theme's normal link colour, matching the Gutenberg project link. */
+.pang-home-news__footer a{
+  color:var(--wp--preset--color--vivid-cyan-blue, #1e73e8) !important;
+}
+@media(max-width:980px){
+  .pang-home-news--aligned{
+    top:0 !important;
+    margin-bottom:0 !important;
+  }
+}
+
+/* 1.0.10 — cache-busted final Home alignment. */
+.pang-home-news.pang-home-news--aligned{
+  position:relative !important;
+  top:-92px !important;
+  margin-top:0 !important;
+  margin-bottom:-92px !important;
+}
+.pang-home-news.pang-home-news--aligned .pang-home-news__head{
+  margin:0 0 44px !important;
+  padding:0 !important;
+}
+.pang-home-news.pang-home-news--aligned .pang-home-news__head h3{
+  display:block !important;
+  margin:0 !important;
+  padding:0 !important;
+  font-size:40px !important;
+  line-height:1.12 !important;
+  font-weight:700 !important;
+  color:#10233f !important;
+}
+.pang-home-news.pang-home-news--aligned .pang-home-news__head h3::after{
+  display:none !important;
+  content:none !important;
+}
+.pang-home-news.pang-home-news--aligned .pang-home-news__separator{
+  display:block !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  width:80px !important;
+  height:4px !important;
+  min-height:4px !important;
+  margin:31px 0 0 !important;
+  padding:0 !important;
+  background:#2271e8 !important;
+  border:0 !important;
+}
+.pang-home-news.pang-home-news--aligned .pang-home-news__footer a{
+  color:#2271e8 !important;
+  font-size:16px !important;
+  font-weight:600 !important;
+  text-decoration:none !important;
+}
+.pang-home-news.pang-home-news--aligned .pang-home-news__footer a:hover{
+  color:#2271e8 !important;
+  text-decoration:none !important;
+}
+@media(max-width:980px){
+  .pang-home-news.pang-home-news--aligned{
+    top:0 !important;
+    margin-bottom:0 !important;
+  }
+}
+
+/* 1.0.11 — Match Latest News heading to the Home H3 used by Selected Projects. */
+.pang-home-news.pang-home-news--aligned .pang-home-news__head h3{
+  font-size:36px !important;
+  line-height:1.15 !important;
+  font-weight:700 !important;
+}
+@media(max-width:620px){
+  .pang-home-news.pang-home-news--aligned .pang-home-news__head h3{font-size:30px !important;}
+}
+
+/* 1.0.12 — Remove artificial vertical offset and match Selected Projects heading. */
+.pang-home-news.pang-home-news--aligned{
+  position:static !important;
+  top:auto !important;
+  margin-top:0 !important;
+  margin-bottom:0 !important;
+  transform:none !important;
+}
+
+.pang-home-news.pang-home-news--aligned .pang-home-news__head{
+  margin:0 0 46px !important;
+  padding:0 !important;
+}
+
+.pang-home-news.pang-home-news--aligned .pang-home-news__head h3{
+  display:block !important;
+  margin:0 !important;
+  padding:0 !important;
+  font-size:36px !important;
+  line-height:1.15 !important;
+  font-weight:700 !important;
+  color:#10233f !important;
+}
+
+.pang-home-news.pang-home-news--aligned .pang-home-news__separator{
+  display:block !important;
+  width:80px !important;
+  height:4px !important;
+  margin:28px 0 0 !important;
+  background:#2271e8 !important;
+}
+
+@media(max-width:980px){
+  .pang-home-news.pang-home-news--aligned .pang-home-news__head h3{
+    font-size:32px !important;
+  }
+}
+
+/* 1.0.13 — Neutral Home wrapper when Gutenberg supplies heading/separator/link. */
+.pang-home-news{
+  position:static !important;
+  top:auto !important;
+  transform:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.pang-home-news > .pang-news-wrap{
+  width:100% !important;
+  max-width:none !important;
+  margin:0 !important;
+}
+
+/* 1.0.14 — Home shortcode is cards-only by default.
+   Heading, separator and All news link are intended to be Gutenberg blocks. */
+.pang-home-news{
+  margin:0 !important;
+  padding:0 !important;
+}
+.pang-home-news > .pang-news-wrap{
+  width:100% !important;
+  max-width:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+
+/* 1.0.15 — cards-only Home shortcode: remove all legacy alignment behavior. */
+.pang-home-news{
+  position:static !important;
+  inset:auto !important;
+  top:auto !important;
+  left:auto !important;
+  right:auto !important;
+  bottom:auto !important;
+  transform:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.pang-home-news > .pang-news-wrap{
+  width:100% !important;
+  max-width:none !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.pang-home-news .pang-home-news__grid{
+  margin:18px 0 24px !important;
+  padding:0 !important;
+  align-items:stretch !important;
+}
