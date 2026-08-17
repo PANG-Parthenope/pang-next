@@ -86,3 +86,10 @@ WordPress remains the operational source; GitHub remains the versioned archive.
 - The generic Posts and Comments menus are hidden for Editors only.
 - Administrator menus are unchanged.
 - Add News attempts to preselect the News category when that category exists.
+
+
+## 0.1.3
+- Removed News menu creation from PANG Data Export.
+- News editorial menus are now exclusively managed by PANG News Manager.
+- PANG Data Export remains a top-level menu for Editors and Administrators.
+- CSV and ZIP export functionality is unchanged.

@@ -2,13 +2,13 @@
 /**
  * Plugin Name: PANG Data Export
  * Description: Export PANG People, Projects, News and Publications to CSV. Includes an Export All ZIP. Available to Editors and Administrators.
- * Version: 0.1.2
+ * Version: 0.1.3
  * Author: PArthenope Navigation Group
  */
 
 if (!defined('ABSPATH')) exit;
 
-define('PANG_DATA_EXPORT_VERSION', '0.1.2');
+define('PANG_DATA_EXPORT_VERSION', '0.1.3');
 define('PANG_DATA_EXPORT_CAP', 'edit_others_posts');
 
 /* -------------------------------------------------------------------------
@@ -26,71 +26,6 @@ add_action('admin_menu', function () {
     );
 });
 
-
-/**
- * Editor UX: expose News as a dedicated menu with All News / Add News,
- * and hide the generic Posts and Comments menus. Administrators are unchanged.
- */
-add_action('admin_menu', function () {
-    if (!current_user_can('edit_others_posts') || current_user_can('manage_options')) {
-        return;
-    }
-
-    add_menu_page(
-        'News',
-        'News',
-        'edit_others_posts',
-        'edit.php?category_name=news',
-        '',
-        'dashicons-megaphone',
-        5
-    );
-
-    add_submenu_page(
-        'edit.php?category_name=news',
-        'All News',
-        'All News',
-        'edit_others_posts',
-        'edit.php?category_name=news'
-    );
-
-    add_submenu_page(
-        'edit.php?category_name=news',
-        'Add News',
-        'Add News',
-        'edit_posts',
-        'post-new.php'
-    );
-
-    remove_menu_page('edit.php');
-    remove_menu_page('edit-comments.php');
-}, 999);
-
-/**
- * When an Editor uses Add News, preselect the News category when available.
- */
-add_action('admin_head-post-new.php', function () {
-    if (!current_user_can('edit_others_posts') || current_user_can('manage_options')) {
-        return;
-    }
-
-    $screen = get_current_screen();
-    if (!$screen || $screen->post_type !== 'post') return;
-
-    $news = get_term_by('slug', 'news', 'category');
-    if (!$news) $news = get_term_by('name', 'News', 'category');
-    if (!$news || is_wp_error($news)) return;
-
-    $term_id = (int) $news->term_id;
-    ?>
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var checkbox = document.getElementById('in-category-<?php echo $term_id; ?>');
-        if (checkbox && !checkbox.checked) checkbox.checked = true;
-    });
-    </script>
-    <?php
-});
 
 function pang_data_export_admin_page() {
     if (!current_user_can(PANG_DATA_EXPORT_CAP)) {
