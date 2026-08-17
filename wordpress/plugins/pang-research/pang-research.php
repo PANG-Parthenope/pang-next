@@ -2,12 +2,12 @@
 /**
  * Plugin Name: PANG Research
  * Description: Structured PANG research projects, Research page grids and Home selected projects.
- * Version: 0.3.2
+ * Version: 0.3.3
  * Author: PArthenope Navigation Group
  */
 if (!defined('ABSPATH')) exit;
 
-define('PANG_RESEARCH_VERSION', '0.3.2');
+define('PANG_RESEARCH_VERSION', '0.3.3');
 
 add_action('init', function () {
     register_post_type('pang_project', array(
@@ -205,6 +205,45 @@ function pang_research_project_card($post_id, $status) {
     <?php return ob_get_clean();
 }
 
+
+/**
+ * PANG 0.3.3: Completed Projects ordering.
+ * Year descending; same year alphabetically by acronym/title.
+ */
+function pang_research_completed_sort_posts($posts) {
+    usort($posts, function ($a, $b) {
+        $meta_keys_end   = array('_pang_end_year', 'end_year', 'project_end_year');
+        $meta_keys_start = array('_pang_start_year', 'start_year', 'project_start_year');
+        $meta_keys_acr   = array('_pang_acronym', 'acronym', 'project_acronym');
+
+        $get_first = function($post_id, $keys) {
+            foreach ($keys as $key) {
+                $v = trim((string) get_post_meta($post_id, $key, true));
+                if ($v !== '') return $v;
+            }
+            return '';
+        };
+
+        $ae = $get_first($a->ID, $meta_keys_end);
+        $be = $get_first($b->ID, $meta_keys_end);
+        $as = $get_first($a->ID, $meta_keys_start);
+        $bs = $get_first($b->ID, $meta_keys_start);
+
+        $ay = is_numeric($ae) ? (int)$ae : (is_numeric($as) ? (int)$as : 0);
+        $by = is_numeric($be) ? (int)$be : (is_numeric($bs) ? (int)$bs : 0);
+
+        if ($ay !== $by) return $by <=> $ay;
+
+        $al = $get_first($a->ID, $meta_keys_acr);
+        $bl = $get_first($b->ID, $meta_keys_acr);
+        if ($al === '') $al = get_the_title($a->ID);
+        if ($bl === '') $bl = get_the_title($b->ID);
+
+        return strcasecmp($al, $bl);
+    });
+    return $posts;
+}
+
 add_shortcode('pang_projects', function ($atts) {
     $atts = shortcode_atts(array('status'=>'ongoing'), $atts, 'pang_projects');
     $status = strtolower((string)$atts['status']) === 'completed' ? 'completed' : 'ongoing';
@@ -215,7 +254,11 @@ add_shortcode('pang_projects', function ($atts) {
     ));
     if (!$q->have_posts()) return '';
     $html = '<div class="pang-projects pang-projects--'.esc_attr($status).'">';
-    foreach (pang_research_unique_posts($q->posts) as $post) $html .= pang_research_project_card($post->ID, $status);
+    $pang_posts = pang_research_unique_posts($q->posts);
+    if ($status === 'completed') {
+        $pang_posts = pang_research_completed_sort_posts($pang_posts);
+    }
+    foreach ($pang_posts as $post) $html .= pang_research_project_card($post->ID, $status);
     return $html.'</div>';
 });
 

@@ -2,19 +2,20 @@
 /**
  * Plugin Name: PANG News Display
  * Description: News archive and Home news cards for the PANG website. Uses standard WordPress posts in the News category.
- * Version: 1.0.15
+ * Version: 1.2.0
  * Author: PANG
  */
 
 if (!defined('ABSPATH')) exit;
 
 final class PANG_News_Display {
-    const VERSION = '1.0.15';
+    const VERSION = '1.2.0';
 
     public static function init() {
         add_shortcode('pang_news_archive', [__CLASS__, 'archive_shortcode']);
         add_shortcode('pang_latest_news', [__CLASS__, 'latest_shortcode']);
         add_action('wp_enqueue_scripts', [__CLASS__, 'register_assets']);
+        add_filter('the_content', [__CLASS__, 'single_featured_image'], 12);
     }
 
     public static function register_assets() {
@@ -79,11 +80,21 @@ final class PANG_News_Display {
         if (!$excerpt) {
             $excerpt = wp_trim_words(wp_strip_all_tags(get_post_field('post_content', $post_id)), 28);
         }
+        $has_image = has_post_thumbnail($post_id);
 
         ob_start(); ?>
-        <article class="pang-news-card<?php echo $compact ? ' pang-news-card--compact' : ''; ?>">
+        <article class="pang-news-card<?php echo $compact ? ' pang-news-card--compact' : ''; ?><?php echo $has_image ? ' pang-news-card--has-image' : ''; ?>">
             <?php if ($compact): ?>
-                <div class="pang-news-card__accent" aria-hidden="true"></div>
+                <?php if ($has_image): ?>
+                    <a class="pang-news-card__image" href="<?php echo esc_url(get_permalink($post_id)); ?>" aria-label="<?php echo esc_attr(get_the_title($post_id)); ?>">
+                        <?php echo get_the_post_thumbnail($post_id, 'large', [
+                            'loading' => 'lazy',
+                            'class' => 'pang-news-card__img',
+                        ]); ?>
+                    </a>
+                <?php else: ?>
+                    <div class="pang-news-card__accent" aria-hidden="true"></div>
+                <?php endif; ?>
                 <div class="pang-news-card__body">
                     <div class="pang-news-card__meta">
                         <time datetime="<?php echo esc_attr(get_the_date('c', $post_id)); ?>"><?php echo esc_html(get_the_date('j M Y', $post_id)); ?></time>
@@ -93,14 +104,31 @@ final class PANG_News_Display {
                     <a class="pang-news-card__link" href="<?php echo esc_url(get_permalink($post_id)); ?>">Read more <span aria-hidden="true">→</span></a>
                 </div>
             <?php else: ?>
-                <div class="pang-news-card__top">
-                    <div class="pang-news-date" aria-label="<?php echo esc_attr(get_the_date('', $post_id)); ?>">
-                        <strong><?php echo esc_html($date_day); ?></strong>
-                        <span><?php echo esc_html($date_mon); ?></span>
-                        <small><?php echo esc_html($date_year); ?></small>
+                <?php if ($has_image): ?>
+                    <div class="pang-news-card__media">
+                        <a href="<?php echo esc_url(get_permalink($post_id)); ?>" aria-label="<?php echo esc_attr(get_the_title($post_id)); ?>">
+                            <?php echo get_the_post_thumbnail($post_id, 'large', [
+                                'loading' => 'lazy',
+                                'class' => 'pang-news-card__img',
+                            ]); ?>
+                        </a>
+                        <div class="pang-news-date pang-news-date--overlay" aria-label="<?php echo esc_attr(get_the_date('', $post_id)); ?>">
+                            <strong><?php echo esc_html($date_day); ?></strong>
+                            <span><?php echo esc_html($date_mon); ?></span>
+                            <small><?php echo esc_html($date_year); ?></small>
+                        </div>
+                        <span class="pang-news-card__category pang-news-card__category--overlay"><?php echo esc_html($category); ?></span>
                     </div>
-                    <span class="pang-news-card__category"><?php echo esc_html($category); ?></span>
-                </div>
+                <?php else: ?>
+                    <div class="pang-news-card__top">
+                        <div class="pang-news-date" aria-label="<?php echo esc_attr(get_the_date('', $post_id)); ?>">
+                            <strong><?php echo esc_html($date_day); ?></strong>
+                            <span><?php echo esc_html($date_mon); ?></span>
+                            <small><?php echo esc_html($date_year); ?></small>
+                        </div>
+                        <span class="pang-news-card__category"><?php echo esc_html($category); ?></span>
+                    </div>
+                <?php endif; ?>
                 <div class="pang-news-card__body">
                     <h3><a href="<?php echo esc_url(get_permalink($post_id)); ?>"><?php echo esc_html(get_the_title($post_id)); ?></a></h3>
                     <p><?php echo esc_html($excerpt); ?></p>
@@ -109,6 +137,29 @@ final class PANG_News_Display {
             <?php endif; ?>
         </article>
         <?php return ob_get_clean();
+    }
+
+    public static function single_featured_image($content) {
+        if (is_admin() || !is_singular('post') || !in_the_loop() || !is_main_query()) {
+            return $content;
+        }
+
+        $post_id = get_the_ID();
+        $news_cat = self::news_category_id();
+        if (!$news_cat || !has_category($news_cat, $post_id) || !has_post_thumbnail($post_id)) {
+            return $content;
+        }
+
+        self::enqueue_assets();
+
+        $image = get_the_post_thumbnail($post_id, 'large', [
+            'class' => 'pang-news-single-featured__img',
+            'loading' => 'eager',
+        ]);
+        if (!$image) return $content;
+
+        $figure = '<figure class="pang-news-single-featured">' . $image . '</figure>';
+        return $figure . $content;
     }
 
     public static function archive_shortcode($atts) {

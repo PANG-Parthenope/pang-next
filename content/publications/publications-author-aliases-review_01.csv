@@ -1,0 +1,272 @@
+﻿cid,original_name,normalized_name,surname_key,initial_key,parse_method,ambiguous_group
+1,GAGLIONE S.,Salvatore Gaglione,GAGLIONE,S,initial-last,no
+2,Angrisano A.,Antonio Angrisano,ANGRISANO,A,initial-last,no
+3,Gioia C.,Ciro Gioia,GIOIA,C,initial-last,no
+4,Robustelli U.,Umberto Robustelli,ROBUSTELLI,U,initial-last,no
+5,Vultaggio M.,Mario Vultaggio,VULTAGGIO,M,initial-last,no
+6,ANGRISANO A,Antonio Angrisano,ANGRISANO,A,initial-last,no
+7,GIOIA C,Ciro Gioia,GIOIA,C,initial-last,no
+8,VULTAGGIO M,Mario Vultaggio,VULTAGGIO,M,initial-last,no
+9,ROBUSTELLI U,Umberto Robustelli,ROBUSTELLI,U,initial-last,no
+10,SANTAMARIA R,R Santamaria,SANTAMARIA,R,initial-last,no
+11,PUGLIANO G,Giovanni Pugliano,PUGLIANO,G,initial-last,no
+12,ROBUSTELLI R,R Robustelli,ROBUSTELLI,R,initial-last,no
+13,PACIFICO A,A Pacifico,PACIFICO,A,initial-last,no
+14,COZZOLINO T,T Cozzolino,COZZOLINO,T,initial-last,no
+15,DE LELLIS E,E De Lellis,DE LELLIS,E,initial-last,no
+16,CORRARO F,F Corraro,CORRARO,F,initial-last,no
+17,CINIGLIO U,U Ciniglio,CINIGLIO,U,initial-last,no
+18,CANZOLINO P,P Canzolino,CANZOLINO,P,initial-last,no
+19,GARBARINO L,L Garbarino,GARBARINO,L,initial-last,no
+20,NASTRO V,V Nastro,NASTRO,V,initial-last,no
+21,CIABURRI M,M Ciaburri,CIABURRI,M,initial-last,no
+22,DEL CORE G,Giuseppe Del Core,DEL CORE,G,initial-last,no
+23,VACCARO C,C Vaccaro,VACCARO,C,initial-last,no
+24,D'AVANZO M,M D'Avanzo,D AVANZO,M,initial-last,no
+25,GERVASONI P,P Gervasoni,GERVASONI,P,initial-last,no
+26,GAGLIONE S,Salvatore Gaglione,GAGLIONE,S,initial-last,no
+27,"ANGRISANO, A",Antonio Angrisano,ANGRISANO,A,comma,no
+28,"GAGLIONE, S",Salvatore Gaglione,GAGLIONE,S,comma,no
+29,"PACIFICO, A",A Pacifico,PACIFICO,A,comma,no
+30,"VULTAGGIO, M",Mario Vultaggio,VULTAGGIO,M,comma,no
+31,"GIOIA, C",Ciro Gioia,GIOIA,C,comma,no
+32,"ROBUSTELLI, U",Umberto Robustelli,ROBUSTELLI,U,comma,no
+33,"SANTAMARIA, R",R Santamaria,SANTAMARIA,R,comma,no
+34,"PUGLIANO, G",Giovanni Pugliano,PUGLIANO,G,comma,no
+35,"ROBUSTELLI, R",R Robustelli,ROBUSTELLI,R,comma,no
+36,"DE LELLIS, E",E De Lellis,DE LELLIS,E,comma,no
+37,"CORRARO, F",F Corraro,CORRARO,F,comma,no
+38,"CINIGLIO, U",U Ciniglio,CINIGLIO,U,comma,no
+39,"CANZOLINO, P",P Canzolino,CANZOLINO,P,comma,no
+40,"GARBARINO, L",L Garbarino,GARBARINO,L,comma,no
+41,"NASTRO, V",V Nastro,NASTRO,V,comma,no
+42,"CIABURRI, M",M Ciaburri,CIABURRI,M,comma,no
+43,"DEL CORE, G",Giuseppe Del Core,DEL CORE,G,comma,no
+44,"VACCARO, C",C Vaccaro,VACCARO,C,comma,no
+45,"D'AVANZO, M",M D'Avanzo,D AVANZO,M,comma,no
+46,"GERVASONI, P",P Gervasoni,GERVASONI,P,comma,no
+47,"COZZOLINO, T",T Cozzolino,COZZOLINO,T,comma,no
+48,s,S,S,,single,no
+49,s,S,S,,single,no
+50,"Nocerino, E",Erica Nocerino,NOCERINO,E,comma,no
+51,"Troisi, S",Salvatore Troisi,TROISI,S,comma,no
+52,"PETOVELLO, M",M Petovello,PETOVELLO,M,comma,no
+53,"ACKERMANN, S",S. Ackermann,ACKERMANN,S,comma,no
+54,"DEL PIZZO, S",Silvio Del Pizzo,DEL PIZZO,S,comma,no
+55,"MASSARO, M",Marco Massaro,MASSARO,M,comma,no
+56,"De Simone, A",A De Simone,DE SIMONE,A,comma,no
+57,"PERROTTA, L",L. Perrotta,PERROTTA,L,comma,no
+58,"Angrisano, Antonio",Antonio Angrisano,ANGRISANO,A,comma,no
+59,"Gaglione, Salvatore",Salvatore Gaglione,GAGLIONE,S,comma,no
+60,"Gioia, Ciro",Ciro Gioia,GIOIA,C,comma,no
+61,"Massaro, Marco",Marco Massaro,MASSARO,M,comma,no
+62,"Robustelli, Umberto",Umberto Robustelli,ROBUSTELLI,U,comma,no
+63,Del Core G.,Giuseppe Del Core,DEL CORE,G,initial-last,no
+64,"Del Core, Giuseppe",Giuseppe Del Core,DEL CORE,G,comma,no
+65,Angrisano,Angrisano,ANGRISANO,,single,no
+66,Gaglione,Gaglione,GAGLIONE,,single,no
+67,Gioia,Gioia,GIOIA,,single,no
+68,Borio,Borio,BORIO,,single,no
+69,Fortuny-Guasch,Fortuny-Guasch,FORTUNY GUASCH,,single,no
+70,A. Angrisano,Antonio Angrisano,ANGRISANO,A,initial-first,no
+71,S. Gaglione,Salvatore Gaglione,GAGLIONE,S,initial-first,no
+72,C. Gioia,Ciro Gioia,GIOIA,C,initial-first,no
+73,D. Borio,Daniele Borio,BORIO,D,initial-first,no
+74,J. Fortuny-Guasch,Joaquim Fortuny-Guasch,FORTUNY GUASCH,J,initial-first,no
+75,"Ackermann, S.",S. Ackermann,ACKERMANN,S,comma,no
+76,"Angrisano, A.",Antonio Angrisano,ANGRISANO,A,comma,no
+77,"Del Pizzo, S.",Silvio Del Pizzo,DEL PIZZO,S,comma,no
+78,"Gaglione, S.",Salvatore Gaglione,GAGLIONE,S,comma,no
+79,"Gioia, C.",Ciro Gioia,GIOIA,C,comma,no
+80,"Troisi, S.",Salvatore Troisi,TROISI,S,comma,no
+81,Giuseppe Rotondo,Giuseppe Rotondo,ROTONDO,G,given-first-default,no
+82,Aniello De Luca,Aniello De Luca,LUCA,A,given-first-default,no
+83,Gaetano Castaldo,Gaetano Castaldo,CASTALDO,G,given-first,no
+84,Ciro Gioia,Ciro Gioia,GIOIA,C,given-first,no
+85,"Troisi, Salvatore",Salvatore Troisi,TROISI,S,comma,no
+86,"Borio, Daniele",Daniele Borio,BORIO,D,comma,no
+87,"Fortuny-Guasch, Joaquim",Joaquim Fortuny-Guasch,FORTUNY GUASCH,J,comma,no
+88,"Freda, Pierluigi",Pierluigi Freda,FREDA,P,comma,no
+89,"Castaldo, Gaetano",Gaetano Castaldo,CASTALDO,G,comma,no
+90,"Del Pizzo, Silvio",Silvio Del Pizzo,DEL PIZZO,S,comma,no
+91,Salvatore Gaglione,Salvatore Gaglione,GAGLIONE,S,given-first,no
+92,Troisi S.,Salvatore Troisi,TROISI,S,initial-last,no
+93,Del Pizzo S.,Silvio Del Pizzo,DEL PIZZO,S,initial-last,no
+94,Miccio A.,A Miccio,MICCIO,A,initial-last,no
+95,Testa R. L.,L. Testa R.,TESTA R,L,initial-last,no
+96,"Miccio, A",A Miccio,MICCIO,A,comma,no
+97,"Testa, R L",Rosa Linda Testa,TESTA,R,comma,yes
+98,"Freda, P.",Pierluigi Freda,FREDA,P,comma,no
+99,"Innac, A.",Anna Innac,INNAC,A,comma,no
+100,"Vultaggio, M.",Mario Vultaggio,VULTAGGIO,M,comma,no
+101,"Crocetto, N.",N. Crocetto,CROCETTO,N,comma,no
+102,"Borio, D.",Daniele Borio,BORIO,D,comma,no
+103,"Castaldo, G.",Gaetano Castaldo,CASTALDO,G,comma,no
+104,"Perrotta, L.",L. Perrotta,PERROTTA,L,comma,no
+105,"Del Core, G.",Giuseppe Del Core,DEL CORE,G,comma,no
+106,"Innac, Anna",Anna Innac,INNAC,A,comma,no
+107,A. Innac,Anna Innac,INNAC,A,initial-first,no
+108,M. Z. H. Bhuiyan,M. Z. H. Bhuiyan,Z H BHUIYAN,M,initial-first,no
+109,S. Söderholm,S. Söderholm,SODERHOLM,S,initial-first,no
+110,H. Kuusniemi,H. Kuusniemi,KUUSNIEMI,H,initial-first,no
+111,"Piscopo, V.",Vincenzo Piscopo,PISCOPO,V,comma,no
+112,"Scamardella, A.",Antonio Scamardella,SCAMARDELLA,A,comma,no
+113,Gaglione Salvatore,Salvatore Gaglione,GAGLIONE,S,surname-first,no
+114,Innac Anna,Anna Innac,INNAC,A,surname-first,no
+115,Carbone Sonia Pastore,Carbone Sonia Pastore,PASTORE,C,given-first-default,no
+116,Troisi Salvatore,Salvatore Troisi,TROISI,S,surname-first,no
+117,Angrisano Antonio,Antonio Angrisano,ANGRISANO,A,surname-first,no
+118,Anna Innac,Anna Innac,INNAC,A,given-first,no
+119,Sonia Carbone Pastore,Sonia Carbone Pastore,PASTORE,S,given-first-default,no
+120,Salvatore Troisi,Salvatore Troisi,TROISI,S,given-first,no
+121,Antonio Angrisano,Antonio Angrisano,ANGRISANO,A,given-first,no
+122,"Maratea, A.",Antonio Maratea,MARATEA,A,comma,no
+123,"Papa, Umberto",Umberto Papa,PAPA,U,comma,no
+124,"Vultaggio, Mario",Mario Vultaggio,VULTAGGIO,M,comma,no
+125,"Salvi, Giuseppe",Giuseppe Salvi,SALVI,G,comma,no
+126,"Salvi, G.",Giuseppe Salvi,SALVI,G,comma,no
+127,"Maratea, Antonio",Antonio Maratea,MARATEA,A,comma,no
+128,"Nunziata, Alessandro",Alessandro Nunziata,NUNZIATA,A,comma,no
+129,Francesco Giordano,Francesco Giordano,GIORDANO,F,given-first-default,no
+130,"Ardimento, P.",P. Ardimento,ARDIMENTO,P,comma,no
+131,"Bernardi, M.L.",M.L. Bernardi,BERNARDI,M,comma,no
+132,"Cimitile, M.",M. Cimitile,CIMITILE,M,comma,no
+133,"Pennino, S.",Silvia Pennino,PENNINO,S,comma,no
+134,"Xu, Haosheng",Haosheng Xu,XU,H,comma,no
+135,"Hsu, Li-Ta",Li-Ta Hsu,HSU,L,comma,no
+136,"Dardanelli, G.",G. Dardanelli,DARDANELLI,G,comma,no
+137,"Pisciotta, A.",A. Pisciotta,PISCIOTTA,A,comma,no
+138,"Pipitone, C.",C. Pipitone,PIPITONE,C,comma,no
+139,"Pennino, Silvia",Silvia Pennino,PENNINO,S,comma,no
+140,"Corte, Vincenzo Della",Vincenzo Della Corte,CORTE,V,comma,no
+141,"Ferraioli, Giampaolo",Giampaolo Ferraioli,FERRAIOLI,G,comma,no
+142,"Martellato, Elena",Elena Martellato,MARTELLATO,E,comma,no
+143,"Palumbo, Pasquale",Pasquale Palumbo,PALUMBO,P,comma,no
+144,"Piscopo, Vincenzo",Vincenzo Piscopo,PISCOPO,V,comma,no
+145,"Rotundi, Alessandra",Alessandra Rotundi,ROTUNDI,A,comma,no
+146,"Scamardella, Antonio",Antonio Scamardella,SCAMARDELLA,A,comma,no
+147,"Della Corte, V.",Vincenzo Della Corte,DELLA CORTE,V,comma,no
+148,"Martellato, E.",Elena Martellato,MARTELLATO,E,comma,no
+149,"Rotundi, A.",Alessandra Rotundi,ROTUNDI,A,comma,no
+150,"Ferraioli, G.",Giampaolo Ferraioli,FERRAIOLI,G,comma,no
+151,"Palumbo, P.",Pasquale Palumbo,PALUMBO,P,comma,no
+152,"Pizzo, Silvio Del",Silvio Del Pizzo,PIZZO,S,comma,yes
+153,"Ciaccio, Fabiana Di",Fabiana Di Ciaccio,CIACCIO,F,comma,no
+154,"Testa, Rosa Linda",Rosa Linda Testa,TESTA,R,comma,yes
+155,"Sciancalepore, Giuseppe",Giuseppe Sciancalepore,SCIANCALEPORE,G,comma,no
+156,"Pedrotti, Davide",Davide Pedrotti,PEDROTTI,D,comma,no
+157,"Pietroluongo, Guido",Guido Pietroluongo,PIETROLUONGO,G,comma,no
+158,"Alessandri, L.",L. Alessandri,ALESSANDRI,L,comma,no
+159,"Cardello, G.L.",G.L. Cardello,CARDELLO,G,comma,no
+160,"Attema, P.A.J.",P.A.J. Attema,ATTEMA,P,comma,no
+161,"Baiocchi, V.",Valerio Baiocchi,BAIOCCHI,V,comma,no
+162,"De Angelis, F.",F. De Angelis,DE ANGELIS,F,comma,no
+163,"Di Ciaccio, F.",Fabiana Di Ciaccio,DI CIACCIO,F,comma,no
+164,"Fiorillo, A.",A. Fiorillo,FIORILLO,A,comma,no
+165,"Gatta, M.",M. Gatta,GATTA,M,comma,no
+166,"Monti, F.",Felicia Monti,MONTI,F,comma,no
+167,"Onori, M.",Matteo Onori,ONORI,M,comma,no
+168,"Rolfo, M.F.",M.F. Rolfo,ROLFO,M,comma,no
+169,"Romboni, M.",M. Romboni,ROMBONI,M,comma,no
+170,"Sottili, G.",G. Sottili,SOTTILI,G,comma,no
+171,"Russo, P.",P. Russo,RUSSO,P,comma,no
+172,"Brigante, R.",R. Brigante,BRIGANTE,R,comma,no
+173,"Giannone, F.",F. Giannone,GIANNONE,F,comma,no
+174,"Radicioni, F.",F. Radicioni,RADICIONI,F,comma,no
+175,"Stoppini, A.",A. Stoppini,STOPPINI,A,comma,no
+176,"Tosi, G.",G. Tosi,TOSI,G,comma,no
+177,"Baumgartner, M.",M. Baumgartner,BAUMGARTNER,M,comma,no
+178,"Pugliano, G.",Giovanni Pugliano,PUGLIANO,G,comma,no
+179,"Robustelli, U.",Umberto Robustelli,ROBUSTELLI,U,comma,no
+180,"Vatore, F.",Felicia Vatore,VATORE,F,comma,no
+181,"León Trujillo, F.J.",F.J. León Trujillo,LEON TRUJILLO,F,comma,no
+182,"Aucelli, P.P.C.",Pietro PC Aucelli,AUCELLI,P,comma,yes
+183,"Mattei, G.",Gaia Mattei,MATTEI,G,comma,no
+184,"Caporizzo, C.",Claudia Caporizzo,CAPORIZZO,C,comma,no
+185,"Cinque, A.",Aldo Cinque,CINQUE,A,comma,no
+186,"Peluso, F.",F. Peluso,PELUSO,F,comma,no
+187,"Stefanile, M.",M. Stefanile,STEFANILE,M,comma,no
+188,"Pappone, G.",Gerardo Pappone,PAPPONE,G,comma,no
+189,"Menegazzo, P.",P. Menegazzo,MENEGAZZO,P,comma,no
+190,"Campanile, A.",A. Campanile,CAMPANILE,A,comma,no
+191,"Mandarino, M.",M. Mandarino,MANDARINO,M,comma,no
+192,"Cappello, G.",Giovanni Cappello,CAPPELLO,G,comma,no
+193,"Pizzo, S.D.",Silvio Del Pizzo,PIZZO,S,comma,yes
+194,"Cappello, Giovanni",Giovanni Cappello,CAPPELLO,G,comma,no
+195,"Ascione, Silvia",Silvia Ascione,ASCIONE,S,comma,no
+196,"Messina, Sebastiano",Sebastiano Messina,MESSINA,S,comma,no
+197,"Piccirillo, Alice Maria",Alice Maria Piccirillo,PICCIRILLO,A,comma,no
+198,"Della Corte, Vincenzo",Vincenzo Della Corte,DELLA CORTE,V,comma,no
+199,"Alcaras, Emanuele",Emanuele Alcaras,ALCARAS,E,comma,no
+200,"Appolloni, Luca",Luca Appolloni,APPOLLONI,L,comma,no
+201,"Aulicino, Giuseppe",Giuseppe Aulicino,AULICINO,G,comma,no
+202,"Bertini, Ivano",Ivano Bertini,BERTINI,I,comma,no
+203,"Capozzi, Vincenzo",Vincenzo Capozzi,CAPOZZI,V,comma,no
+204,"Catucci, Elena",Elena Catucci,CATUCCI,E,comma,no
+205,"Dionnet, Zelia",Zelia Dionnet,DIONNET,Z,comma,no
+206,"Di Palma, Pasquale",Pasquale Di Palma,DI PALMA,P,comma,no
+207,"Esposito, Flavio",Flavio Esposito,ESPOSITO,F,comma,no
+208,"Ferrentino, Emanuele",Emanuele Ferrentino,FERRENTINO,E,comma,no
+209,"Inno, Laura",Laura Inno,INNO,L,comma,no
+210,"Saviano, Simona",Simona Saviano,SAVIANO,S,comma,no
+211,"Tirimberio, Giuseppina",Giuseppina Tirimberio,TIRIMBERIO,G,comma,no
+212,"Campopiano, Stefania",Stefania Campopiano,CAMPOPIANO,S,comma,no
+213,"Chianese, Elena",Elena Chianese,CHIANESE,E,comma,no
+214,"Franzese, Pier Paolo",Pier Paolo Franzese,FRANZESE,P,comma,no
+215,"Fusco, Giannetta",Giannetta Fusco,FUSCO,G,comma,no
+216,"Iadicicco, Agostino",Agostino Iadicicco,IADICICCO,A,comma,no
+217,"Nunziata, Ferdinando",Ferdinando Nunziata,NUNZIATA,F,comma,no
+218,"Parente, Claudio",Claudio Parente,PARENTE,C,comma,no
+219,"Riccio, Angelo",Angelo Riccio,RICCIO,A,comma,no
+220,"Russo, Giovanni Fulvio",Giovanni Fulvio Russo,RUSSO,G,comma,no
+221,"Zambianchi, Enrico",Enrico Zambianchi,ZAMBIANCHI,E,comma,no
+222,"Rossi, Giovanni Battista",Giovanni Battista Rossi,ROSSI,G,comma,no
+223,"Cannata, Andrea",Andrea Cannata,CANNATA,A,comma,no
+224,"Iengo, Antonio",Antonio Iengo,IENGO,A,comma,no
+225,"Migliaccio, Maurizio",Maurizio Migliaccio,MIGLIACCIO,M,comma,no
+226,"Nardone, Gabriele",Gabriele Nardone,NARDONE,G,comma,no
+227,"Crenna, Francesco",Francesco Crenna,CRENNA,F,comma,no
+228,"Berardengo, Marta",Marta Berardengo,BERARDENGO,M,comma,no
+229,"Mocerino, Luigia",Luigia Mocerino,MOCERINO,L,comma,no
+230,"D’Amato, Egidio",Egidio D’Amato,DAMATO,E,comma,no
+231,"Notaro, Immacolata",Immacolata Notaro,NOTARO,I,comma,no
+232,"Baiocchi, Valerio",Valerio Baiocchi,BAIOCCHI,V,comma,no
+233,"Monti, Felicia",Felicia Monti,MONTI,F,comma,no
+234,"Pugliano, Giovanni",Giovanni Pugliano,PUGLIANO,G,comma,no
+235,"Onori, Matteo",Matteo Onori,ONORI,M,comma,no
+236,"Vatore, Felicia",Felicia Vatore,VATORE,F,comma,no
+237,"Trujillo, Francisco James León",Francisco James León Trujillo,TRUJILLO,F,comma,no
+238,"Russo, Francesca",Francesca Russo,RUSSO,F,comma,no
+239,"Di Ciaccio, Fabiana",Fabiana Di Ciaccio,DI CIACCIO,F,comma,no
+240,"Portelli, Gabriele",Gabriele Portelli,PORTELLI,G,comma,no
+241,"Susi, Melania",Melania Susi,SUSI,M,comma,no
+242,"Mattei, Gaia",Gaia Mattei,MATTEI,G,comma,no
+243,"Amato, Lucio",Lucio Amato,AMATO,L,comma,no
+244,"Caporizzo, Claudia",Claudia Caporizzo,CAPORIZZO,C,comma,no
+245,"Cinque, Aldo",Aldo Cinque,CINQUE,A,comma,no
+246,"Pappone, Gerardo",Gerardo Pappone,PAPPONE,G,comma,no
+247,"Sorrentino, Alessia",Alessia Sorrentino,SORRENTINO,A,comma,no
+248,"Stocchi, Paolo",Paolo Stocchi,STOCCHI,P,comma,no
+249,"Aucelli, Pietro PC",Pietro PC Aucelli,AUCELLI,P,comma,yes
+250,"Bagheri, Milad",Milad Bagheri,BAGHERI,M,comma,no
+251,"Dabove, Paolo",Paolo Dabove,DABOVE,P,comma,no
+252,"Nocerino, Erica",Erica Nocerino,NOCERINO,E,comma,no
+253,"Calantropio, Alessio",Alessio Calantropio,CALANTROPIO,A,comma,no
+254,"Menna, Fabio",Fabio Menna,MENNA,F,comma,no
+255,"Ferrigno, Luigi",Luigi Ferrigno,FERRIGNO,L,comma,no
+256,"Miele, Gianfranco",Gianfranco Miele,MIELE,G,comma,no
+257,"Velusamy, Keerthana",Keerthana Velusamy,VELUSAMY,K,comma,no
+258,"Sciacca, Andrea",Andrea Sciacca,SCIACCA,A,comma,no
+259,"Galassi, F.M.",F.M. Galassi,GALASSI,F,comma,no
+260,"Papa, V.",V. Papa,PAPA,V,comma,no
+261,"Varotto, E.",E. Varotto,VAROTTO,E,comma,no
+262,"Amoroso, Pier Paolo",Pier Paolo Amoroso,AMOROSO,P,comma,no
+263,"Contestabile, Pasquale",Pasquale Contestabile,CONTESTABILE,P,comma,no
+264,"Cotroneo, Yuri",Yuri Cotroneo,COTRONEO,Y,comma,no
+265,"Figliomeni, Francesco Giuseppe",Francesco Giuseppe Figliomeni,FIGLIOMENI,F,comma,no
+266,"Vicinanza, Diego",Diego Vicinanza,VICINANZA,D,comma,no
+267,"Budillon, Giorgio",Giorgio Budillon,BUDILLON,G,comma,no
+268,"Ariante, Gennaro",Gennaro Ariante,ARIANTE,G,comma,no
+269,"Rocquelain, Lucie",Lucie Rocquelain,ROCQUELAIN,L,comma,no
+270,"Core, Giuseppe Del",Giuseppe Del Core,CORE,G,comma,no
+271,"Piccolo, Andrea",Andrea Piccolo,PICCOLO,A,comma,no

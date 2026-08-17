@@ -68,3 +68,10 @@ No featured images are required. The card top area is intentionally image-free a
 - Removed legacy pang-home-news--aligned class from Home output.
 - Reset all historical positioning/transform rules.
 - Home News grid now uses the same 18px top / 24px bottom spacing as Selected Projects.
+
+1.2.0:
+- Featured Images are rendered in archive News cards when available.
+- Featured Images are rendered in compact Latest News Home cards when available.
+- Featured Image is prepended to individual News article content for the PANG News category.
+- News without a Featured Image keep the existing blue fallback treatment.
+- Existing body text and managed galleries remain unchanged.

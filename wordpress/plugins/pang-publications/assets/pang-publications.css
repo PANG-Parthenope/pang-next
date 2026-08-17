@@ -1,0 +1,143 @@
+.pang-publications{--pang-blue:#075aa7;--pang-deep:#063d78;--pang-sky:#53c4ef;--pang-soft:#eaf8ff;--pang-line:rgba(7,90,167,.16);--pang-text:#183247;--pang-muted:#607687;color:var(--pang-text);width:100%}.pang-publications *{box-sizing:border-box}.pang-publications__toolbar{display:grid;grid-template-columns:minmax(250px,1.5fr) 130px minmax(190px,.9fr) minmax(150px,.7fr) auto;gap:12px;align-items:end;padding:18px;margin-bottom:16px;border:1px solid var(--pang-line);border-radius:14px;background:linear-gradient(115deg,rgba(7,90,167,.08),rgba(83,196,239,.15))}.pang-publications__filter label,.pang-publications__label-spacer{display:block;margin-bottom:6px;font-size:.76rem;font-weight:750;letter-spacing:.045em;text-transform:uppercase;color:var(--pang-deep)}.pang-publications__filter input,.pang-publications__filter select{width:100%;min-height:44px;padding:9px 12px;border:1px solid rgba(7,90,167,.25);border-radius:9px;background:#fff;color:var(--pang-text);font:inherit}.pang-publications__filter input:focus,.pang-publications__filter select:focus{border-color:var(--pang-blue);outline:3px solid rgba(83,196,239,.24)}.pang-publications__search-wrap{position:relative}.pang-publications__search-wrap input{padding-left:38px}.pang-publications__search-icon{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--pang-blue);font-size:1.25rem}.pang-publications__reset{min-height:44px;padding:9px 16px;border:1px solid rgba(7,90,167,.28);border-radius:9px;background:#fff;color:var(--pang-deep);font-weight:700;cursor:pointer}.pang-publications__summary{margin:0 0 10px;color:var(--pang-muted);font-size:.92rem}.pang-publications__summary strong{color:var(--pang-deep);font-size:1.08rem}.pang-publications__table-wrap{overflow:hidden;border:1px solid var(--pang-line);border-radius:14px;background:#fff;box-shadow:0 10px 30px rgba(13,69,112,.06)}.pang-publications__table{width:100%;margin:0;border-collapse:separate;border-spacing:0;table-layout:fixed}.pang-publications__table th{padding:14px 13px;border:0;background:linear-gradient(105deg,var(--pang-deep),var(--pang-blue) 58%,var(--pang-sky));color:#fff;font-size:.76rem;font-weight:750;letter-spacing:.04em;text-align:left;text-transform:uppercase}.pang-publications__table td{padding:15px 13px;border:0;border-bottom:1px solid var(--pang-line);vertical-align:top;background:#fff;font-size:.92rem;line-height:1.45}.pang-publications__table tbody tr:nth-child(even) td{background:linear-gradient(90deg,rgba(234,248,255,.5),rgba(255,255,255,.97))}.pang-publications__table tbody tr:hover td{background:linear-gradient(90deg,rgba(83,196,239,.12),rgba(234,248,255,.75))}.pang-publications__year-cell,.pang-publications__col-year{width:70px;font-weight:750;color:var(--pang-deep)}.pang-publications__title-cell{width:29%}.pang-publications__authors-cell{width:24%;color:var(--pang-muted)}.pang-publications__source-cell{width:22%}.pang-publications__col-actions,.pang-publications__actions-cell{width:145px}.pang-publications__meta{margin-top:5px;color:var(--pang-muted);font-size:.78rem}.pang-publications__actions{display:flex;gap:6px;flex-wrap:wrap}.pang-publications__pill,.pang-publications__cite{display:inline-flex;align-items:center;justify-content:center;padding:5px 8px;border:0;border-radius:999px;background:linear-gradient(110deg,var(--pang-blue),var(--pang-sky));color:#fff!important;font-size:.74rem;font-weight:750;text-decoration:none!important;cursor:pointer}.pang-publications__pill--secondary{background:#fff;color:var(--pang-blue)!important;border:1px solid rgba(7,90,167,.28)}.pang-publications__cite{background:var(--pang-deep)}.pang-publications__empty,.pang-publications-message{margin-top:15px;padding:15px;border:1px solid var(--pang-line);border-radius:10px;background:var(--pang-soft);color:var(--pang-deep)}.pang-publications [hidden]{display:none!important}.pang-modal-open{overflow:hidden}.pang-cite-modal{position:fixed;inset:0;z-index:999999}.pang-cite-modal__backdrop{position:absolute;inset:0;background:rgba(2,24,44,.58)}.pang-cite-modal__panel{position:relative;z-index:1;width:min(680px,calc(100% - 32px));max-height:calc(100vh - 48px);overflow:auto;margin:24px auto;padding:24px;border-radius:16px;background:#fff;box-shadow:0 24px 70px rgba(0,0,0,.25)}.pang-cite-modal__close{position:absolute;right:14px;top:10px;border:0;background:transparent;font-size:30px;cursor:pointer;color:var(--pang-muted)}.pang-cite-modal h3{margin:0 40px 8px 0;color:var(--pang-deep)}.pang-cite-modal__title{margin-bottom:16px;font-weight:650}.pang-cite-modal__buttons{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}.pang-cite-modal__buttons button{padding:8px 11px;border:1px solid rgba(7,90,167,.25);border-radius:8px;background:linear-gradient(115deg,rgba(7,90,167,.08),rgba(83,196,239,.16));color:var(--pang-deep);font-weight:700;cursor:pointer}.pang-cite-modal__preview{width:100%;min-height:150px;padding:12px;border:1px solid var(--pang-line);border-radius:9px;font:13px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace}.pang-cite-modal__status{min-height:22px;margin-top:8px;color:var(--pang-blue);font-weight:650}
+@media(max-width:1050px){.pang-publications__toolbar{grid-template-columns:1fr 1fr 1fr}.pang-publications__filter--search{grid-column:1/-1}.pang-publications__filter--reset{align-self:end}}
+@media(max-width:760px){.pang-publications__toolbar{grid-template-columns:1fr}.pang-publications__filter--search{grid-column:auto}.pang-publications__label-spacer{display:none}.pang-publications__reset{width:100%}.pang-publications__table-wrap{overflow:visible;border:0;border-radius:0;box-shadow:none;background:transparent}.pang-publications__table,.pang-publications__table tbody,.pang-publications__table tr,.pang-publications__table td{display:block;width:100%}.pang-publications__table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.pang-publications__table tbody tr{margin-bottom:14px;overflow:hidden;border:1px solid var(--pang-line);border-radius:12px;box-shadow:0 7px 22px rgba(13,69,112,.05)}.pang-publications__table tbody td,.pang-publications__table tbody tr:nth-child(even) td,.pang-publications__table tbody tr:hover td{position:relative;width:100%;padding:10px 14px 10px 106px;border-bottom:1px solid var(--pang-line);background:#fff}.pang-publications__table tbody td::before{content:attr(data-label);position:absolute;left:14px;top:10px;width:78px;color:var(--pang-deep);font-size:.7rem;font-weight:750;letter-spacing:.04em;text-transform:uppercase}.pang-publications__table tbody td:last-child{border-bottom:0}}
+
+
+/* PANG Publications 1.1.0 – final public-page refinements */
+.pang-publications__table{
+    table-layout:fixed;
+}
+.pang-publications__col-year,
+.pang-publications__year-cell{width:72px}
+.pang-publications__col-title{width:31%}
+.pang-publications__col-authors{width:31%}
+.pang-publications__col-source{width:22%}
+.pang-publications__col-actions,
+.pang-publications__actions-cell{width:118px}
+
+.pang-publications__title-cell{
+    width:auto;
+    font-weight:400;
+}
+.pang-publications__title-cell strong{
+    display:block;
+    color:var(--pang-deep);
+    font-size:.96rem;
+    font-weight:700;
+    line-height:1.42;
+}
+.pang-publications__authors-cell{
+    color:var(--pang-text);
+    font-size:.91rem;
+    line-height:1.55;
+    overflow-wrap:anywhere;
+}
+.pang-publications__source-cell{
+    color:var(--pang-text);
+    font-size:.9rem;
+    line-height:1.45;
+    overflow-wrap:anywhere;
+}
+.pang-publications__meta{
+    margin-top:5px;
+    color:var(--pang-muted);
+    font-size:.8rem;
+    font-weight:500;
+}
+.pang-publications__actions{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:7px;
+}
+.pang-publications__pill,
+.pang-publications__cite{
+    width:100%;
+    min-height:31px;
+    padding:6px 8px;
+    border-radius:7px;
+    font-size:.76rem;
+    line-height:1.15;
+    text-align:center;
+}
+.pang-publications__provenance{
+    margin:13px 2px 0;
+    color:var(--pang-muted);
+    font-size:.78rem;
+    line-height:1.45;
+}
+.pang-cite-modal__panel{
+    width:min(720px,calc(100% - 32px));
+}
+.pang-cite-modal__title{
+    padding-bottom:14px;
+    border-bottom:1px solid var(--pang-line);
+    color:var(--pang-text);
+    line-height:1.42;
+}
+.pang-cite-modal__group{
+    margin:14px 0 0;
+}
+.pang-cite-modal__group-title,
+.pang-cite-modal__preview-label{
+    display:block;
+    margin:0 0 7px;
+    color:var(--pang-deep);
+    font-size:.73rem;
+    font-weight:750;
+    letter-spacing:.045em;
+    text-transform:uppercase;
+}
+.pang-cite-modal__buttons{
+    margin-bottom:0;
+}
+.pang-cite-modal__buttons button{
+    min-width:86px;
+}
+.pang-cite-modal__preview-label{
+    margin-top:18px;
+}
+.pang-cite-modal__preview{
+    min-height:132px;
+    resize:vertical;
+    background:#fbfdff;
+    color:#243b4c;
+}
+
+@media(max-width:1050px) and (min-width:761px){
+    .pang-publications__col-title{width:30%}
+    .pang-publications__col-authors{width:29%}
+    .pang-publications__col-source{width:22%}
+    .pang-publications__col-actions,
+    .pang-publications__actions-cell{width:108px}
+    .pang-publications__table tbody td{padding:13px 11px}
+}
+
+@media(max-width:760px){
+    .pang-publications__provenance{
+        margin:10px 2px 0;
+    }
+    .pang-publications__actions{
+        flex-direction:row;
+        flex-wrap:wrap;
+    }
+    .pang-publications__pill,
+    .pang-publications__cite{
+        width:auto;
+        min-width:68px;
+    }
+    .pang-cite-modal__panel{
+        width:calc(100% - 20px);
+        margin:10px auto;
+        max-height:calc(100vh - 20px);
+        padding:20px 16px;
+    }
+}
+
+.pang-cite-modal__buttons button.is-active{border-color:var(--pang-blue);background:linear-gradient(110deg,var(--pang-blue),var(--pang-sky));color:#fff}
+
+/* 1.1.1 mobile label spacing */
+@media(max-width:760px){
+ .pang-publications__table tbody td{padding-left:130px;}
+ .pang-publications__table tbody td::before{width:100px;white-space:nowrap;}
+}
